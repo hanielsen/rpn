@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="rpn.appcache" lang="da">
+<html>
 <head>
 <meta charset="utf-8">
 <title>RPN</title>
@@ -8,135 +8,137 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="icon" href="rpn.png">
 <style>
-body {
-    font-family: helvetica;
+body 
+{
+    font-family: sans-serif;
+    margin: 0;
 }
 
 .item1 { 
-    grid-area: 1 / 1 / 1 / 5; 
+    grid-area: 1 / 1 / 2 / 5;
 }
 .item2 { 
-    grid-area: 2 / 1 / 2 / 5; 
+    grid-area: 2 / 1 / 3 / 5; 
 }
 .item31 { 
-    grid-area: 3 / 1 / 3 / 2; 
+    grid-area: 3 / 1 / 4 / 2;
 }
 .item32 { 
-    grid-area: 3 / 2 / 3 / 3; 
+    grid-area: 3 / 2 / 4 / 3; 
 }
 .item33 { 
-    grid-area: 3 / 3 / 3 / 4; 
+    grid-area: 3 / 3 / 4 / 4; 
 }
 .item34 { 
-    grid-area: 3 / 4 / 3 / 5; 
+    grid-area: 3 / 4 / 4 / 5; 
 }
 .item41 { 
-    grid-area: 4 / 1 / 4 / 2; 
+    grid-area: 4 / 1 / 5 / 2; 
 }
 .item42 { 
-    grid-area: 4 / 2 / 4 / 3; 
+    grid-area: 4 / 2 / 5 / 3; 
 }
 .item43 { 
-    grid-area: 4 / 3 / 4 / 4; 
+    grid-area: 4 / 3 / 5 / 4; 
 }
 .item44 { 
-    grid-area: 4 / 4 / 4 / 5; 
+    grid-area: 4 / 4 / 5 / 5; 
 }
 .item51 { 
-    grid-area: 5 / 1 / 5 / 2; 
+    grid-area: 5 / 1 / 6 / 2; 
 }
 .item52 { 
-    grid-area: 5 / 2 / 5 / 3; 
+    grid-area: 5 / 2 / 6 / 3; 
 }
 .item53 { 
-    grid-area: 5 / 3 / 5 / 4; 
+    grid-area: 5 / 3 / 6 / 4; 
 }
 .item54 { 
-    grid-area: 5 / 4 / 5 / 5; 
+    grid-area: 5 / 4 / 6 / 5; 
 }
 .item61 { 
-    grid-area: 6 / 1 / 6 / 2; 
+    grid-area: 6 / 1 / 7 / 2; 
 }
 .item62 { 
-    grid-area: 6 / 2 / 6 / 3; 
+    grid-area: 6 / 2 / 7 / 3; 
 }
 .item63 { 
-    grid-area: 6 / 3 / 6 / 4; 
+    grid-area: 6 / 3 / 7 / 4; 
 }
 .item64 { 
-    grid-area: 6 / 4 / 6 / 5; 
+    grid-area: 6 / 4 / 7 / 5; 
 }
 .item71 { 
-    grid-area: 7 / 1 / 7 / 2; 
+    grid-area: 7 / 1 / 8 / 2; 
 }
 .item72 { 
-    grid-area: 7 / 2 / 7 / 3; 
+    grid-area: 7 / 2 / 8 / 3; 
 }
 .item73 { 
-    grid-area: 7 / 3 / 7 / 4; 
+    grid-area: 7 / 3 / 8 / 4; 
 }
 .item74 { 
-    grid-area: 7 / 4 / 7 / 5; 
+    grid-area: 7 / 4 / 8 / 5;
+    color: red;    
 }
 .item81 { 
-    grid-area: 8 / 1 / 8 / 2; 
+    grid-area: 8 / 1 / 9 / 2; 
 }
 .item82 { 
-    grid-area: 8 / 2 / 8 / 3; 
+    grid-area: 8 / 2 / 9 / 3; 
 }
 .item83 { 
     grid-area: 8 / 3 / 8 / 4; 
 }
 .item84 { 
-    grid-area: 8 / 4 / 8 / 5; 
+    grid-area: 8 / 4 / 9 / 5; 
 }
 .item91 { 
-    grid-area: 9 / 1 / 9 / 2; 
+    grid-area: 9 / 1 / 10 / 2; 
 }
 .item92 { 
-    grid-area: 9 / 2 / 9 / 3; 
+    grid-area: 9 / 2 / 10 / 3; 
 }
 .item93 { 
-    grid-area: 9 / 3 / 9 / 4; 
+    grid-area: 9 / 3 / 10 / 4; 
 }
 .item94 { 
-    grid-area: 9 / 4 / 9 / 5; 
+    grid-area: 9 / 4 / 10 / 5; 
 }
 .itema1 { 
-    grid-area: 10 / 1 / 10 / 2; 
+    grid-area: 10 / 1 / 11 / 2; 
 }
 .itema2 { 
-    grid-area: 10 / 2 / 10 / 3; 
+    grid-area: 10 / 2 / 11 / 3; 
 }
 .itema3 { 
-    grid-area: 10 / 3 / 10 / 4; 
+    grid-area: 10 / 3 / 11 / 4; 
 }
 .itema4 { 
-    grid-area: 10 / 4 / 10 / 5; 
+    grid-area: 10 / 4 / 11 / 5; 
 }
 .itemb1 { 
-
-    grid-area: 11 / 1 / 11 / 2; 
+    grid-area: 11 / 1 / 12 / 2; 
 }
 .itemb2 { 
-    grid-area: 11 / 2 / 11 / 3; 
+    grid-area: 11 / 2 / 12 / 3; 
 }
 .itemb3 { 
-    grid-area: 11 / 3 / 11 / 4; 
+    grid-area: 11 / 3 / 12 / 4; 
 }
 .itemb4 { 
-    grid-area: 11 / 4 / 11 / 5; 
+    grid-area: 11 / 4 / 12 / 5; 
 }
 
 .grid-container {
     display: grid;
-    background-color: #2196F3;
+    background-color: grey; 
     padding: .2em;
     grid-gap: .2em
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     text-align: center;
     padding-left: .2em;
     padding-right: .2em;
@@ -145,16 +147,40 @@ body {
     font-size: 1em;
 }
 
-#rpnT {
-    color:red;
-    font-size: 1.2em;
+.grid-item:hover {
+    background-color: rgba(255, 255, 255, 0.75);
 }
+
+#rpnT {
+    color:black;
+    font-size: 1.5em;
+    background: white;
+}
+
+.menu {
+    height: 6em;
+    width: 10em;
+    border: .1em solid;
+    background-color: #eee;
+    display: none;
+    position: fixed;
+    left: 1em;
+    top: 2em;
+    z-index: 1;
+}
+
+.c1 {
+    padding-top: .5em;
+    padding-left: .2em;
+}
+
 </style>
 </head>
 
 <body>
 <div class="grid-container" >
-    <div class="item1 grid-item" onclick="rpnD()">RPN CALCULATOR</div>
+    <div class="item1 grid-item" onclick="mys1()">
+        <img src="ios-menu.svg" style="width:1.5em;height:1em;float:left;"> RPN CALCULATOR</div>
     <div class="item2 grid-item" id="rpnT" >0</div>
     <div class="item31 grid-item" onclick="rpnK('7')">7</div>
     <div class="item32 grid-item" onclick="rpnK('8')">8</div>
@@ -175,7 +201,7 @@ body {
     <div class="item71 grid-item" onclick="rpnK('c')">C</div>
     <div class="item72 grid-item" onclick="rpnK('r')">R</div>
     <div class="item73 grid-item" onclick="rpnK('t')">T</div>
-    <div class="item74 grid-item" onclick="rpnK('e')">E</div>
+    <div class="item74 grid-item" onclick="rpnK('e')">ENT</div>
     <div class="item81 grid-item" onclick="rpnX(1)">1/X</div>
     <div class="item82 grid-item" onclick="rpnX(2)">Y^X</div>
     <div class="item83 grid-item" onclick="rpnX(3)">SQRT</div>
@@ -188,19 +214,38 @@ body {
     <div class="itema2 grid-item" onclick="rpnX(10)">ACOS</div>
     <div class="itema3 grid-item" onclick="rpnX11)">TAN</div>
     <div class="itema4 grid-item" onclick="rpnX(12)">ATAN</div>
-    <div class="itemb1 grid-item" onclick="rpnS(1)">STO1</div>
-    <div class="itemb2 grid-item" onclick="rpnR(1)">RCL1</div>
-    <div class="itemb3 grid-item" onclick="rpnS(2)">STO2</div>
-    <div class="itemb4 grid-item" onclick="rpnR(2)">RCL2</div>
+    <div class="itemb1 grid-item" onclick="rpnS(0)">STO1</div>
+    <div class="itemb2 grid-item" onclick="rpnR(0)">RCL1</div>
+    <div class="itemb3 grid-item" onclick="rpnS(1)">STO2</div>
+    <div class="itemb4 grid-item" onclick="rpnR(1)">RCL2</div>
+</div>
+<div id="myd" class="menu" >
+    <form>
+        <div class="c1" style="">Number of decimals: </div>
+        <div class="c1" style=""><input id="i1" type="text" maxlength="2" size="3" value="2"></div>
+        <div class="c1" style=""><input type="button" onclick="mys2()" value="Done"></div>
+    </form>
 </div>
 
 
 <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}  
+
 //med keyboard action
 var x = 0, y = 0, z = 0, t = 0;
 var done = true, ent = false; 
 var p = 2;  
-var mm = new Array(10);
+var mm = [0, 0];
 var rpnt = document.getElementById("rpnT")
 document.onkeypress = Kbe;
 
@@ -249,6 +294,24 @@ function rpnD() {
     rpnt.innerHTML = rpnF(x);
 }
 
+function mys1() {
+    var myd=document.getElementById("myd");
+    myd.style.display = "block";
+    document.onkeypress = null;
+}
+
+function mys2() {
+    var myd=document.getElementById("myd");
+    var i1=document.getElementById("i1");
+    myd.style.display = "none"
+    p=i1.value;
+    if (p==null) {
+        p = 2;
+    }
+    rpnt.innerHTML = rpnF(x);
+    document.onkeypress = Kbe;
+}
+
 function rpnF(a) {
     return Number(a).toFixed(p); 
 }
@@ -268,9 +331,9 @@ function rpnK(evt){
             rpnt.innerHTML += evt;
         }
     } else if (evt=='c') {
-        rpnt.innerHTML = "";
-        done = false;
-        ent = false;
+        rpnt.innerHTML = "0";
+        done = true;
+        ent = true;
     } else if (evt=='e') {
         if (!done) {
               x = parseFloat(rpnt.innerHTML);
