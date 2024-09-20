@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html manifest="rpn.appcache" lang="da">
+<head>
+<meta charset="utf-8">
+<title>RPN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="rpn.png">
+<style>
+body {
+    font-family: helvetica;
+}
+
+.item1 { 
+    grid-area: 1 / 1 / 1 / 5; 
+}
+.item2 { 
+    grid-area: 2 / 1 / 2 / 5; 
+}
+.item31 { 
+    grid-area: 3 / 1 / 3 / 2; 
+}
+.item32 { 
+    grid-area: 3 / 2 / 3 / 3; 
+}
+.item33 { 
+    grid-area: 3 / 3 / 3 / 4; 
+}
+.item34 { 
+    grid-area: 3 / 4 / 3 / 5; 
+}
+.item41 { 
+    grid-area: 4 / 1 / 4 / 2; 
+}
+.item42 { 
+    grid-area: 4 / 2 / 4 / 3; 
+}
+.item43 { 
+    grid-area: 4 / 3 / 4 / 4; 
+}
+.item44 { 
+    grid-area: 4 / 4 / 4 / 5; 
+}
+.item51 { 
+    grid-area: 5 / 1 / 5 / 2; 
+}
+.item52 { 
+    grid-area: 5 / 2 / 5 / 3; 
+}
+.item53 { 
+    grid-area: 5 / 3 / 5 / 4; 
+}
+.item54 { 
+    grid-area: 5 / 4 / 5 / 5; 
+}
+.item61 { 
+    grid-area: 6 / 1 / 6 / 2; 
+}
+.item62 { 
+    grid-area: 6 / 2 / 6 / 3; 
+}
+.item63 { 
+    grid-area: 6 / 3 / 6 / 4; 
+}
+.item64 { 
+    grid-area: 6 / 4 / 6 / 5; 
+}
+.item71 { 
+    grid-area: 7 / 1 / 7 / 2; 
+}
+.item72 { 
+    grid-area: 7 / 2 / 7 / 3; 
+}
+.item73 { 
+    grid-area: 7 / 3 / 7 / 4; 
+}
+.item74 { 
+    grid-area: 7 / 4 / 7 / 5; 
+}
+.item81 { 
+    grid-area: 8 / 1 / 8 / 2; 
+}
+.item82 { 
+    grid-area: 8 / 2 / 8 / 3; 
+}
+.item83 { 
+    grid-area: 8 / 3 / 8 / 4; 
+}
+.item84 { 
+    grid-area: 8 / 4 / 8 / 5; 
+}
+.item91 { 
+    grid-area: 9 / 1 / 9 / 2; 
+}
+.item92 { 
+    grid-area: 9 / 2 / 9 / 3; 
+}
+.item93 { 
+    grid-area: 9 / 3 / 9 / 4; 
+}
+.item94 { 
+    grid-area: 9 / 4 / 9 / 5; 
+}
+.itema1 { 
+    grid-area: 10 / 1 / 10 / 2; 
+}
+.itema2 { 
+    grid-area: 10 / 2 / 10 / 3; 
+}
+.itema3 { 
+    grid-area: 10 / 3 / 10 / 4; 
+}
+.itema4 { 
+    grid-area: 10 / 4 / 10 / 5; 
+}
+.itemb1 { 
+
+    grid-area: 11 / 1 / 11 / 2; 
+}
+.itemb2 { 
+    grid-area: 11 / 2 / 11 / 3; 
+}
+.itemb3 { 
+    grid-area: 11 / 3 / 11 / 4; 
+}
+.itemb4 { 
+    grid-area: 11 / 4 / 11 / 5; 
+}
+
+.grid-container {
+    display: grid;
+    background-color: #2196F3;
+    padding: .2em;
+    grid-gap: .2em
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding-left: .2em;
+    padding-right: .2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-size: 1em;
+}
+
+#rpnT {
+    color:red;
+    font-size: 1.2em;
+}
+</style>
+</head>
+
+<body>
+<div class="grid-container" >
+    <div class="item1 grid-item" onclick="rpnD()">RPN CALCULATOR</div>
+    <div class="item2 grid-item" id="rpnT" >0</div>
+    <div class="item31 grid-item" onclick="rpnK('7')">7</div>
+    <div class="item32 grid-item" onclick="rpnK('8')">8</div>
+    <div class="item33 grid-item" onclick="rpnK('9')">9</div>
+    <div class="item34 grid-item" onclick="rpnK('/')">/</div>
+    <div class="item41 grid-item" onclick="rpnK('4')">4</div>
+    <div class="item42 grid-item" onclick="rpnK('5')">5</div>
+    <div class="item43 grid-item" onclick="rpnK('6')">6</div>
+    <div class="item44 grid-item" onclick="rpnK('*')">*</div>
+    <div class="item51 grid-item" onclick="rpnK('1')">1</div>
+    <div class="item52 grid-item" onclick="rpnK('2')">2</div>
+    <div class="item53 grid-item" onclick="rpnK('3')">3</div>
+    <div class="item54 grid-item" onclick="rpnK('-')">-</div>
+    <div class="item61 grid-item" onclick="rpnK('0')">0</div>
+    <div class="item62 grid-item" onclick="rpnK('.')">.</div>
+    <div class="item63 grid-item" onclick="rpnK('s')">+/-</div>
+    <div class="item64 grid-item" onclick="rpnK('+')">+</div>
+    <div class="item71 grid-item" onclick="rpnK('c')">C</div>
+    <div class="item72 grid-item" onclick="rpnK('r')">R</div>
+    <div class="item73 grid-item" onclick="rpnK('t')">T</div>
+    <div class="item74 grid-item" onclick="rpnK('e')">E</div>
+    <div class="item81 grid-item" onclick="rpnX(1)">1/X</div>
+    <div class="item82 grid-item" onclick="rpnX(2)">Y^X</div>
+    <div class="item83 grid-item" onclick="rpnX(3)">SQRT</div>
+    <div class="item84 grid-item" onclick="rpnX(4)">X^2</div>
+    <div class="item91 grid-item" onclick="rpnX(5)">EXP</div>
+    <div class="item92 grid-item" onclick="rpnX(6)">LOG</div>
+    <div class="item93 grid-item" onclick="rpnX(7)">SIN</div>
+    <div class="item94 grid-item" onclick="rpnX(8)">ASIN</div>
+    <div class="itema1 grid-item" onclick="rpnX(9)">COS</div>
+    <div class="itema2 grid-item" onclick="rpnX(10)">ACOS</div>
+    <div class="itema3 grid-item" onclick="rpnX11)">TAN</div>
+    <div class="itema4 grid-item" onclick="rpnX(12)">ATAN</div>
+    <div class="itemb1 grid-item" onclick="rpnS(1)">STO1</div>
+    <div class="itemb2 grid-item" onclick="rpnR(1)">RCL1</div>
+    <div class="itemb3 grid-item" onclick="rpnS(2)">STO2</div>
+    <div class="itemb4 grid-item" onclick="rpnR(2)">RCL2</div>
+</div>
+
+
+<script>
+//med keyboard action
+var x = 0, y = 0, z = 0, t = 0;
+var done = true, ent = false; 
+var p = 2;  
+var mm = new Array(10);
+var rpnt = document.getElementById("rpnT")
+document.onkeypress = Kbe;
+
+function Kbe(evt) {
+    var key = 0;
+    var ks ='0';
+    if (window.event) {
+        key = window.event.keyCode;
+    } else if (evt) {
+        key = evt.keyCode;
+    }
+    if (key>47 && key<58) {
+        ks = (key-48) + '';
+        rpnK(ks);
+    } else if (key==101) {
+        rpnK('e');
+    } else if (key==99) {
+        rpnK('c');
+    } else if (key==116) {
+        rpnK('t');
+    } else if (key==114) {
+        rpnK('r');
+    } else if (key==115) {
+        rpnK('s');
+    } else if (key==47) {
+        rpnK('/');
+    } else if (key==42) {
+        rpnK('*');
+    } else if (key==43) {
+        rpnK('+');
+    } else if (key==45) {
+        rpnK('-');
+    } else if (key==46) {
+        rpnK('.');
+    } else if (key==13) {
+        rpnK('e');
+    }     
+    return true;
+}
+
+function rpnD() {
+    p = prompt("number of decimals", p);
+    if (p==null) {
+        p = 2;
+    }
+    rpnt.innerHTML = rpnF(x);
+}
+
+function rpnF(a) {
+    return Number(a).toFixed(p); 
+}
+
+function rpnK(evt){
+    if (['0','1','2','3','4','5','6','7','8','9','.'].includes(evt)) {
+        if (done) {
+            if (!ent) { 
+                t = z;
+                z = y;
+                y = x;
+            }
+            rpnt.innerHTML = evt;
+            done = false;
+            ent = false;
+        } else {
+            rpnt.innerHTML += evt;
+        }
+    } else if (evt=='c') {
+        rpnt.innerHTML = "";
+        done = false;
+        ent = false;
+    } else if (evt=='e') {
+        if (!done) {
+              x = parseFloat(rpnt.innerHTML);
+        }
+        t = z;    
+        z = y;    
+        y = x;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = true;
+    } else if (evt=='r') {
+        if (!done) {
+            x = parseFloat(rpnt.innerHTML);
+        }
+        u = x;
+        x = y;
+        y = z;
+        z = t;
+        t = u;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = false;
+    } else if (evt=='s') {
+        if (!done) {
+            x = parseFloat(rpnt.innerHTML);
+        } 
+        x = -x;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = false;
+    } else if (evt=='t') {
+        if (!done) {
+            x = parseFloat(rpnt.innerHTML);
+        }
+        u = x;
+        x = y; 
+        y = u;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = false;
+    } else if (evt=='+') {
+        if (!done) {
+            x = parseFloat(rpnt.innerHTML);
+        }
+        x = x+y;
+        y = z;
+        z = t;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = false;
+    } else if (evt=='-') {
+        if (!done) {
+            x = parseFloat(rpnt.innerHTML);
+        }
+        x = y-x;
+        y = z;
+        z = t;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = false;
+    } else if (evt=='*') {
+        if (!done) {
+            x = parseFloat(rpnt.innerHTML);
+        }
+        x = x*y;
+        y = z;
+        z = t;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = false;
+    } else if (evt=='/') {
+        if (!done) {
+            x= parseFloat(rpnt.innerHTML);
+        }
+        x = y/x;
+        y = z;
+        z = t;
+        rpnt.innerHTML = rpnF(x);
+        done = true;
+        ent = false;
+    }
+}
+
+function rpnX(fi) {
+    if (!done) {
+        x = parseFloat(rpnt.innerHTML);
+    }
+    if (fi==1) {
+        x = 1/x;
+    } else if (fi==2) {
+        x = Math.exp(x*Math.log(y));
+    } else if (fi==3) {
+        x = Math.sqrt(x);
+    } else if (fi==4) {
+        x = x*x;
+    } else if (fi==5) {
+        x = Math.exp(x);
+    } else if (fi==6) {
+        x = Math.log(x);
+    } else if (fi==7) {
+        x = Math.sin(x);
+    } else if (fi==8) {
+        x = Math.asin(x);
+    } else if (fi==9) {
+        x = Math.cos(x);
+    } else if (fi==10) {
+        x = Math.acos(x);
+    } else if (fi==11) {
+        x = Math.tan(x);
+    } else if (fi==12) {
+        x = Math.atan(x);
+    }
+    rpnt.innerHTML = rpnF(x);
+    done = true;
+    ent = false;
+}
+
+function rpnS(mi) {
+    if (!done) {
+        x = parseFloat(rpnt.innerHTML);
+    }
+    mm[mi] = x;
+    rpnt.innerHTML = rpnF(x);
+    done = true;
+    ent = false;
+}
+
+function rpnR(mi) {
+    if (!done) {
+        x = parseFloat(rpnt.innerHTML);
+    }
+    t = z; z = y; y = x;
+    x = mm[mi];
+    rpnt.innerHTML = rpnF(x);
+    done = true;
+    ent = false;
+}
+
+</script>
+</body>
+</html>
