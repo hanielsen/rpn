@@ -1,9 +1,9 @@
 var CACHE_NAME = 'rpnsw-1';
 var urlsToCache = [
-    '/rpn.html', 
-    '/rpn.png',
-    'apple-touch-icon.png',
-    'ios-menu.svg'
+    './rpn.html', 
+    './rpn.png',
+    './apple-touch-icon.png',
+    './ios-menu.svg'
 ];
 
 self.addEventListener('install', function(event) {
