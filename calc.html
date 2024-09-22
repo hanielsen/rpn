@@ -1,0 +1,68 @@
+<html>
+<head> 
+    <title>Calculator</title> 
+    <script src="calcpan.js"></script>
+    <style type="text/css">
+          body {font-family: helvetica}
+          td {width: 40px; height: 30px; text-align: center; font-size: 12pt}
+          button {width: 40px; font-family: helvetica; font-size: 12pt}</style>
+</head>
+<body onload="Kbsetup()">
+<table id="calc" border="2" frame="border" bgcolor="gray" cellspacing="0" width="160">
+    <tr>
+        <td colspan="4" style="height: 24px; font-size: 10pt; width: 120px;color:white; background-color: blue">RPN-CALCULATOR</td>
+    </tr><tr>
+        <td colspan="4" style="height: 36px">
+            <input type="text" id="rpnT" size="18" value="0" style="font-family: helvetica; font-size: 12pt" onclick="rpnD()" title="change number of decimals"></td>
+    </tr><tr>
+        <td><button type="button" onclick="rpnK(7)">7</button></td>
+        <td><button type="button" onclick="rpnK(8)">8</button></td>
+        <td><button type="button" onclick="rpnK(9)">9</button></td>
+        <td><button type="button" onclick="rpnK('/')"> &divide;</button></td>
+    </tr><tr>
+        <td><button type="button" onclick="rpnK(4)">4</button></td>
+        <td><button type="button" onclick="rpnK(5)">5</button></td>
+        <td><button type="button" onclick="rpnK('6')">6</button></td>
+        <td><button type="button" onclick="rpnK('*')">&times;</button></td>
+    </tr><tr>
+        <td><button type="button" onclick="rpnK(1)">1</button></td>
+        <td><button type="button" onclick="rpnK(2)">2</button></td>
+        <td><button type="button" onclick="rpnK(3)">3</button></td>
+        <td><button type="button" onclick="rpnK('-')">-</button></td>
+    </tr><tr>
+        <td><button type="button" onclick="rpnK(0)">0</button></td>
+        <td><button type="button" onclick="rpnK('.')">.</button></td>
+        <td><button type="button" onclick="rpnK('e')" style="color: red" title="push stack">E</button></td>
+        <td><button type="button" onclick="rpnK('+')">+</button></td>
+    </tr><tr>
+        <td><button type="button" onclick="rpnK('c')" title="clear">C</button></td>
+        <td><button type="button" onclick="rpnK('t')" title="twist x/y">T</button></td>
+        <td><button type="button" onclick="rpnK('r')" title="rotate stack">R</button></td>
+        <td><button type="button" onclick="rpnK('s')" title="change sign">S</button></td>
+    </tr><tr>
+        <td  colspan="4">
+        <select id="rpnFc" onchange="rpnX(rpnFc.value)">
+            <option>Function</option>
+            <option value="1">1/x</option>
+            <option value="2">y^x</option>
+            <option value="3">sqrt</option>
+            <option value="4">x^2</option>
+            <option value="5">exp</option>
+            <option value="6">log</option>
+            <option value="7">sin</option>
+            <option value="8">asin</option>
+            <option value="9">cos</option>
+            <option value="10">acos</option>
+            <option value="11">tan</option>
+            <option value="12">atan</option>
+        </select></td>
+    </tr><tr> 
+        <td  colspan="2">
+        <select id="rpnM">
+            <option>Memory</option>
+        </select></td>
+        <td><button type="button" onclick="rpnS()" title="store">Sto</button></td>
+        <td><button type="button" onclick="rpnR()" title="recall">Rcl</button></td></tr>
+</table>
+</body>
+</html>
